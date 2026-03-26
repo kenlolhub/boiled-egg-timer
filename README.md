@@ -1,5 +1,5 @@
 ---
-title: 蛋蛋計時小幫手
+title: 🥚 Egg Timer Web App
 emoji: "🥚"
 colorFrom: blue
 colorTo: indigo
@@ -7,6 +7,23 @@ sdk: gradio
 app_file: app.py
 pinned: false
 ---
+
+A simple web app that calculates perfect egg boiling time based on:
+- Number of eggs
+- Desired doneness
+- Heat conditions
+
+## Features
+- Clean UI
+- Adjustable timing formula
+- Confetti celebration when done 🎉
+
+## Tech Stack
+- Python / Flask (or JS)
+- HTML/CSS
+
+## Demo
+https://huggingface.co/spaces/kenlolhku/egg-timer
 
 # 蛋蛋計時小幫手 (Hugging Face Space)
 
