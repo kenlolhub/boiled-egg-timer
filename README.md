@@ -13,10 +13,21 @@ A simple web app that calculates perfect egg boiling time based on:
 - Desired doneness
 - Heat conditions
 
+## 📸 Screenshots
+
+![App Screenshot](assets/egg-timer-screenshot.png)
+
 ## Features
 - Clean UI
 - Adjustable timing formula
 - Confetti celebration when done 🎉
+
+## 💡 Why I built this
+
+I wanted a simple way to calculate perfect egg boiling time, 
+especially when cooking multiple eggs under different heat conditions.
+
+This project also helped me experiment with building and deploying a small web app.
 
 ## Tech Stack
 - Python / Flask (or JS)
