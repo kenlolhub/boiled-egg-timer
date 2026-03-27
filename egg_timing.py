@@ -16,16 +16,19 @@ DONENESS_BASE_SECONDS: Dict[str, int] = {
 SECONDS_PER_EXTRA_EGG = 4
 
 
-def calculate_cook_seconds(egg_count: int, doneness: str) -> int:
+def calculate_cook_seconds(egg_count: int, doneness: str, custom_seconds: int = 480) -> int:
     """Return total cook time in seconds based on eggs and doneness."""
     if egg_count < 1:
         raise ValueError("egg_count must be at least 1")
 
-    if doneness not in DONENESS_BASE_SECONDS:
+    if doneness == "Custom":
+        base_seconds = custom_seconds
+    elif doneness not in DONENESS_BASE_SECONDS:
         valid = ", ".join(DONENESS_BASE_SECONDS.keys())
-        raise ValueError(f"doneness must be one of: {valid}")
+        raise ValueError(f"doneness must be one of: {valid}, Custom")
+    else:
+        base_seconds = DONENESS_BASE_SECONDS[doneness]
 
-    base_seconds = DONENESS_BASE_SECONDS[doneness]
     extra_eggs = max(0, egg_count - 1)
     adjustment = extra_eggs * SECONDS_PER_EXTRA_EGG
     return base_seconds + adjustment
